@@ -397,23 +397,3 @@ This system recommends songs based on emotional analysis of lyrics.
 - Daily Commute
 """)
 st.sidebar.markdown("---")
-
-
-import hashlib, os, sys
-import pandas as pd
-import sklearn
-
-def md5(path):
-    if not os.path.exists(path):
-        return None
-    with open(path, "rb") as f:
-        return hashlib.md5(f.read()).hexdigest()
-
-st.sidebar.markdown("### DEBUG")
-st.sidebar.write("PY:", sys.version.split()[0])
-st.sidebar.write("PANDAS:", pd.__version__)
-st.sidebar.write("SKLEARN:", sklearn.__version__)
-st.sidebar.write("CSV_MD5:", md5("all_songs_emotion_probabilities.csv"))
-st.sidebar.write("VEC_MD5:", md5("model_assets/vectorizer.joblib"))
-st.sidebar.write("CLF_MD5:", md5("model_assets/svm_emotion_model.joblib"))
-st.sidebar.write("SW_MD5:", md5("model_assets/stop_words.joblib"))
