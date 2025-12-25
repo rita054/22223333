@@ -1,0 +1,29 @@
+# Python快取檔案
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+
+# Python虛擬環境
+venv/
+env/
+ENV/
+
+# IDE設定檔案
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# 作業系統檔案
+.DS_Store
+Thumbs.db
+
+# Streamlit暫存
+.streamlit/
+
+# 大型資料檔案（可選）
+# *.xlsx
+# *.csv
+# *.pkl
